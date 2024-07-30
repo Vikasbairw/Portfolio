@@ -1,0 +1,75 @@
+@media (max-width:1090px) {
+   .aside{
+   left: -270px;
+   }
+   .section{
+   left: 0px;
+   max-width: 100%;
+   overflow: hidden;
+   }
+   .section .container {
+    padding-top: 50px;
+    padding-bottom: 0px;
+}
+.aside .nav-toggler{
+    display: flex;
+    left: 30px;
+}
+}
+@media (max-width:887px) {
+    .home-img img{
+        display: none;
+    }
+     .home-img::after,.home-img::before{
+        display: none;
+        width: 0px;
+     }
+    .home .home-info{
+        flex: 0 0 100%;
+        max-width: 100%;
+       
+     }
+     .about .about-content .personal-info .info-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .home-info p{
+        padding-right: 0;
+    }
+}
+@media (max-width:700px) {
+    .about .about-content .education {
+        flex: 0 0 100%;
+        max-width: 100%;
+      
+    }
+}
+@media (max-width:550px) {
+    .row{
+        display: block;
+    }
+    .about .about-content .personal-info {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .about .about-content .skills {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .contact .contact-info-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+    .contact .contact-form .col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .section .container {
+        padding-top: 50px;
+        padding-bottom: 0px;
+    }
+}
+@media (max-width:600px) {
+    
+}
