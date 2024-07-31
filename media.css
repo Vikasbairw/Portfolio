@@ -1,6 +1,7 @@
 @media (max-width:1090px) {
    .aside{
-   left: -270px;
+   /* left: -270px; */
+   display: none;
    }
    .section{
    left: 0px;

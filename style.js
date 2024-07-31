@@ -57,21 +57,6 @@ form.addEventListener('submit', function(e) {
     }
   )
 
-  /*night */
-  const daynight = document.querySelector('.day-night');
-  daynight.addEventListener(
-    'click',
-    ()=>{
-      if(daynight.querySelector('i').classList.contains('fa-moon')){
-        daynight.querySelector('i').classList.remove('fa-moon')
-        daynight.querySelector('i').classList.add('fa-sun')
-      }else if(daynight.querySelector('i').classList.contains('fa-sun')){
-        daynight.querySelector('i').classList.add('fa-moon')
-        daynight.querySelector('i').classList.remove('fa-sun')
-      }
-      
-    }
-  )
 
 
 /*change the color theams Start*/
@@ -89,43 +74,76 @@ document.documentElement.style.setProperty('--skin-color',getcolorValue)
   }
 )
 
-/*Change the color theams End*/
-// if(document.getElementsByClassName('.fa-sun')==true){
-//   console.log("hello")
-// }
-// const getsun_moon = document.querySelector('.fa-moon');
-// getsun_moon.addEventListener('click', () => {
-//   document.documentElement.style.setProperty('--bg-black-900', '#0e0e0f');
-//   document.documentElement.style.setProperty('--bg-black-100', '#252526');
-//   document.documentElement.style.setProperty('--bg-black-50', '#343335');
-//   document.documentElement.style.setProperty('--text-black-900', '#e7e6ed');
-//   document.documentElement.style.setProperty('--text-black-700', '#f0eff4');
-// });
 
 
-const getsun_sun = document.querySelector('.fa-sun');
-getsun_sun.addEventListener('click', () => {
+
+
+
+
+
+
+
+  /*night */
+  const daynight = document.querySelector('.day-night');
+  daynight.addEventListener(
+    'click',
+    ()=>{
+      if(daynight.querySelector('i').classList.contains('fa-moon')){
+        daynight.querySelector('i').classList.remove('fa-moon')
+        daynight.querySelector('i').classList.add('fa-sun')
+      }else if( daynight.querySelector('i').classList.contains('fa-sun')){
+        daynight.querySelector('i').classList.remove('fa-sun')
+        daynight.querySelector('i').classList.add('fa-moon')
+      }
+    }
+  )
+
+
+
+//ye dark karne ke kam aata h - moon
+const getmoon = document.querySelector('.fa-moon');
+getmoon.addEventListener('click', () => {
+  console.log("moon")
   document.documentElement.style.setProperty('--bg-black-900', '#0e0e0f');
   document.documentElement.style.setProperty('--bg-black-100', '#252526');
   document.documentElement.style.setProperty('--bg-black-50', '#343335');
   document.documentElement.style.setProperty('--text-black-900', '#e7e6ed');
   document.documentElement.style.setProperty('--text-black-700', '#f0eff4');
 });
+  const getsun_sun = document.querySelector('.fa-sun');  
+  console.log(getsun_sun,"sun")
+getsun_sun.addEventListener('click', (e) => {
+
+  // document.documentElement.style.setProperty('--bg-black-900', '#f2f2fc');
+  // document.documentElement.style.setProperty('--bg-black-100', '#fdf9ff');
+  // document.documentElement.style.setProperty('--bg-black-50', '#e8dfec');
+  // document.documentElement.style.setProperty('--text-black-900', '#302e4d');
+  // document.documentElement.style.setProperty('--text-black-700', '#504e70');
+});
 
 
 
-const resume_show=document.querySelector('.show');
-resume_show.addEventListener('click',
-  function(e){
-    document.querySelector('.resume_show').classList.toggle('resume_cover')
-    
+
+//onclick menu bar open and closed future
+
+const menu=document.querySelector('.nav-toggler');
+menu.addEventListener(
+  'click',
+  (e)=>{
+document.querySelector('.aside').classList.toggle('open');
+if(document.querySelector('.aside').classList.contains('open')){
+  document.querySelector('.nav-toggler').style.setProperty('display',"none");
+}
+
   }
 )
 
-const remove_show=document.querySelector('.resume_show');
-remove_show.addEventListener('click',
-  function(e){
-    document.querySelector('.resume_show').classList.toggle('resume_cover')
-    
+window.addEventListener(
+  'scroll',
+  ()=>{
+    if(document.querySelector('.aside').classList.contains('open')){
+      document.querySelector('.aside').classList.remove('open');
+      document.querySelector('.nav-toggler').style.setProperty('display',"flex");
+    }
   }
 )

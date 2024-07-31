@@ -130,6 +130,21 @@ ul {
     left: 0px;
     top: 0px;
     height: 100%;
+    z-index:9999;
+}
+
+.main-container .open{
+    width: 270px;
+    background: var(--bg-black-100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid var(--bg-black-50);
+    padding: 30px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100%;
     z-index:10;
 }
 
@@ -177,23 +192,24 @@ ul {
     right: 0px;
 }
 
-.aside .nav-toggler {
+.main-container .nav-toggler {
     height: 40px;
     width: 45px;
     border: 1px solid var(--bg-black-50);
     cursor: pointer;
     position: fixed;
-    left: 300px;
-    top: 20px;
+    left: 50px;
+    top: 30px;
     border-radius: 5px;
     background: var(--bg-black-100);
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 9999;
 
 }
 
-.aside .nav-toggler span {
+.main-container .nav-toggler span {
     height: 2px;
     width: 18px;
     background: var(--skin-color);
@@ -203,7 +219,7 @@ ul {
 
 }
 
-.aside .nav-toggler span::after {
+.main-container .nav-toggler span::after {
     content: '';
     height: 2px;
     width: 18px;
@@ -213,7 +229,7 @@ ul {
     left: 0px;
 }
 
-.aside .nav-toggler span::before {
+.main-container .nav-toggler span::before {
     content: '';
     height: 2px;
     width: 18px;
